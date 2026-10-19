@@ -43,24 +43,25 @@
     // ТЕСТЫ И ОТЛАДКА (ЧЕРЕЗ CTRL+T)
     // ==========================================
     {
-        "key": "ctrl+t ctrl+r",
-        "command": "testing.runCurrentFile",
-        "when": "editorTextFocus && testing.isSearchingForTests == false"
-    },
-    {
-        "key": "ctrl+t ctrl+d",
-        "command": "testing.debugCurrentFile",
-        "when": "editorTextFocus && testing.isSearchingForTests == false"
-    },
-    {
         "key": "ctrl+t ctrl+t",
         "command": "testing.runAtCursor",
         "when": "editorTextFocus"
     },
     {
+        "key": "ctrl+t ctrl+a",
+        "command": "testing.runCurrentFile",
+        "when": "editorTextFocus && testing.isSearchingForTests == false"
+    },
+
+    {
         "key": "ctrl+t ctrl+d",
         "command": "testing.debugAtCursor",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+t ctrl+f",
+        "command": "testing.debugCurrentFile",
+        "when": "editorTextFocus && testing.isSearchingForTests == false"
     },
     {
         "key": "ctrl+t ctrl+r",
