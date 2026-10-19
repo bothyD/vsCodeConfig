@@ -1,0 +1,56 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.mouseWheelScrollSensitivity": 3,
+    "python.analysis.extraPaths": [
+        "./uc_modules",
+        "${workspaceFolder}"
+    ],
+    "python.autoComplete.extraPaths": [
+        "./uc_modules",
+        "${workspaceFolder}"
+    ],
+    "python.venvFolders": [
+        ".venv",
+        "venv"
+    ],
+
+    // Динамический поиск. VS Code сам подставит venv или .venv, смотря что найдет
+    "python.defaultInterpreterPath": "${workspaceFolder}/${config:python.venvFolders}/bin/python",
+
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+
+    // Дебаггер будет останавливаться только в вашем коде
+    "testing.debugOptions": [
+        "RedirectOutput",
+        "JustMyCode"
+    ],
+
+    "testing.gutterEnabled": true,
+    "testing.saveBeforeTest": true,
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.stickyScroll.enabled": true,
+
+    // Автоматическое добавление финальной пустой строки (требование PEP8)
+    "files.insertFinalNewline": true,
+    // Автоматическое удаление пустых строк в самом конце файла при сохранении
+    "files.trimFinalNewlines": true,
+
+    // Вертикальная линия-маркер на 88 и 120 символов.
+    // Помогает визуально видеть, когда строка кода становится слишком длинной
+    "editor.rulers":[99],
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.venv": false,
+        "**/venv": false
+    }
+}
