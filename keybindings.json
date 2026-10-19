@@ -1,0 +1,168 @@
+[
+    // ==========================================
+    // ВАШИ СУЩЕСТВУЮЩИЕ ХОТКЕИ (СОХРАНЕНО)
+    // ==========================================
+    {
+        "key": "ctrl+space",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "editor.action.transformToUppercase"
+    },
+
+    // ==========================================
+    // ТЕСТЫ И ОТЛАДКА (ЧЕРЕЗ CTRL+T)
+    // ==========================================
+    {
+        "key": "ctrl+t ctrl+r",
+        "command": "testing.runCurrentFile",
+        "when": "editorTextFocus && testing.isSearchingForTests == false"
+    },
+    {
+        "key": "ctrl+t ctrl+d",
+        "command": "testing.debugCurrentFile",
+        "when": "editorTextFocus && testing.isSearchingForTests == false"
+    },
+    {
+        "key": "ctrl+t ctrl+t",
+        "command": "testing.runAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+t ctrl+d",
+        "command": "testing.debugAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+t ctrl+r",
+        "command": "testing.reRunLastRun"
+    },
+    // Переключить на вкладку панели СЛЕВА
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.previousPanelView",
+        "when": "panelFocus"
+    },
+    // Переключить на вкладку панели СПРАВА
+    {
+        "key": "ctrl+]",
+        "command": "workbench.action.nextPanelView",
+        "when": "panelFocus"
+    },
+    // Переключить на открытый файл СЛЕВА
+    {
+        "key": "ctrl+alt+[",
+        "command": "workbench.action.previousEditor"
+    },
+    // Переключить на открытый файл СПРАВА
+    {
+        "key": "ctrl+alt+]",
+        "command": "workbench.action.nextEditor"
+    },
+
+    // ==========================================
+    // НАВИГАЦИЯ БЕЗ МЫШКИ (ОКНА, ПАНЕЛИ, ФАЙЛЫ)
+    // ==========================================
+
+    // Показать/скрыть левую боковую панель (Проводник / Сайдбар)
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    // Фокус на ДЕРЕВО ФАЙЛОВ слева (чтобы стрелочками выбирать файлы)
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    // Вернуть фокус обратно в РЕДАКТОР КОДА из любого окна (боковой панели, терминала)
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus || sideBarFocus"
+    },
+    // Прыгнуть в ТЕРМИНАЛ (вместо клика мышкой по нему)
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus"
+    },
+    // Быстрый поиск любого файла в проекте по названию
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
+    },
+
+    // =========================================================
+    // ГОРЯЧИЕ КЛАВИШИ ДЛЯ ДЕБАГА (УПРАВЛЕНИЕ ТОЧКАМИ И ШАГАМИ)
+    // =========================================================
+
+    // 1. Поставить / снять точку останова (Toggle Breakpoint) на одну кнопку F9
+    {
+        "key": "f9",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "editorTextFocus"
+    },
+
+    // 2. Шаг без захода внутрь функций (Step Over) — кнопка F10
+    {
+        "key": "f10",
+        "command": "workbench.action.debug.stepOver",
+        "when": "inDebugMode"
+    },
+
+    // 3. Шагнуть внутрь функции / метода (Step Into) — кнопка F11
+    {
+        "key": "f11",
+        "command": "workbench.action.debug.stepInto",
+        "when": "inDebugMode"
+    },
+
+    // 4. Шагнуть наружу из текущей функции (Step Out) — кнопка Shift + F11
+    {
+        "key": "shift+f11",
+        "command": "workbench.action.debug.stepOut",
+        "when": "inDebugMode"
+    },
+
+    // 5. Продолжить выполнение до следующей точки (Continue) — кнопка F5
+    {
+        "key": "f5",
+        "command": "workbench.action.debug.continue",
+        "when": "inDebugMode"
+    },
+
+    // 6. Полностью остановить отладку (Stop Debugging) — кнопка Shift + F5
+    {
+        "key": "shift+f5",
+        "command": "workbench.action.debug.stop",
+        "when": "inDebugMode"
+    },
+]
