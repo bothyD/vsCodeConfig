@@ -1,0 +1,2 @@
+# vsCodeConfig
+конфиг vsCode
