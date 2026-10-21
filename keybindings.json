@@ -99,11 +99,6 @@
         "key": "ctrl+b",
         "command": "workbench.action.toggleSidebarVisibility"
     },
-    // Фокус на ДЕРЕВО ФАЙЛОВ слева (чтобы стрелочками выбирать файлы)
-    {
-        "key": "ctrl+shift+e",
-        "command": "workbench.files.action.focusFilesExplorer"
-    },
     // Вернуть фокус обратно в РЕДАКТОР КОДА из любого окна (боковой панели, терминала)
     {
         "key": "escape",
@@ -166,4 +161,47 @@
         "command": "workbench.action.debug.stop",
         "when": "inDebugMode"
     },
+
+    // ==========================================
+    // НАВИГАЦИЯ ПО БОКОВОЙ ПАНЕЛИ (SIDEBAR)
+    // ==========================================
+
+    // Быстрый фокус на конкретные разделы
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.view.search",
+        "when": "viewContainer.workbench.view.search.enabled"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "workbench.view.scm",
+        "when": "viewContainer.workbench.view.scm.enabled"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "ctrl+shift+x",
+        "command": "workbench.view.extensions",
+        "when": "viewContainer.workbench.view.extensions.enabled"
+    },
+    // Последовательное переключение вкладок Сайдбара (Вперед / Назад)
+    {
+        "key": "alt+]",
+        "command": "workbench.action.nextSideBarView",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "alt+[",
+        "command": "workbench.action.previousSideBarView",
+        "when": "sideBarFocus"
+    },
+
 ]
